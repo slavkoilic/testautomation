@@ -15,7 +15,7 @@ public class LoginPage {
     By loginButton = By.name("btnLogin");
 
 
-    public void Guru99Login(WebDriver driver){
+    public LoginPage(WebDriver driver){
         this.driver = driver;
     }
 
@@ -31,6 +31,11 @@ public class LoginPage {
     public void clickLogin(){
         driver.findElement(loginButton).click();
     }
+
+    public String getLoginTitle(){
+        return driver.findElement(titleText).getText();
+    }
+
 
     public void loginToGuru99(String strUserName, String strPassword){
 
