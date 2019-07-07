@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f90d4b2e-8638-49cb-8046-3c49ac0cafeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/guru99/demo/TestGuru99Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium.iml" beforeDir="false" afterPath="$PROJECT_DIR$/selenium.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/guru99/demo/TestGuru99Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/guru99/demo/TestGuru99Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+            <state relative-caret-position="162">
+              <caret line="9" column="56" lean-forward="true" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#254#255#0" expanded="true" />
@@ -71,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/guru99/demo/TestGuru99Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+            <state relative-caret-position="882">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,9 +96,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/TestGuru99.java" />
         <option value="$PROJECT_DIR$/src/com/guru99/demo/TestGuru99.java" />
-        <option value="$PROJECT_DIR$/src/pages/HomePage.java" />
         <option value="$PROJECT_DIR$/src/pages/HomePageTest.java" />
         <option value="$PROJECT_DIR$/src/pages/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/pages/HomePage.java" />
         <option value="$PROJECT_DIR$/src/com/guru99/demo/TestGuru99Login.java" />
       </list>
     </option>
@@ -242,6 +240,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestGuru99Login.test_HomePageTitle" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.guru99.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.guru99.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.guru99.demo.TestGuru99Login" />
+      <option name="METHOD_NAME" value="test_HomePageTitle" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -263,6 +280,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.TestGuru99Login" />
+        <item itemvalue="TestNG.TestGuru99Login.test_HomePageTitle" />
         <item itemvalue="Application.TestGuru99" />
       </list>
     </recent_temporary>
@@ -281,13 +299,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestGuru99Login - 2019.07.07 at 18h 09m 38s.xml">
-      <configuration name="TestGuru99Login" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="TestGuru99Login - 2019.07.07 at 18h 11m 39s.xml">
-      <configuration name="TestGuru99Login" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="TestGuru99Login - 2019.07.07 at 18h 13m 56s.xml">
+      <configuration name="TestGuru99Login" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestGuru99Login_test_HomePageTitle - 2019.07.07 at 18h 22m 42s.xml">
+      <configuration name="TestGuru99Login.test_HomePageTitle" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestGuru99Login - 2019.07.07 at 18h 23m 20s.xml">
+      <configuration name="TestGuru99Login" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestGuru99Login - 2019.07.07 at 18h 24m 30s.xml">
+      <configuration name="TestGuru99Login" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestGuru99Login - 2019.07.07 at 18h 26m 13s.xml">
+      <configuration name="TestGuru99Login" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestGuru99Login - 2019.07.07 at 18h 51m 17s.xml">
+      <configuration name="TestGuru99Login" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestGuru99Login - 2019.07.07 at 18h 53m 02s.xml">
+      <configuration name="TestGuru99Login" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestGuru99Login - 2019.07.07 at 18h 59m 31s.xml">
+      <configuration name="TestGuru99Login" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestGuru99Login - 2019.07.07 at 19h 06m 34s.xml">
+      <configuration name="TestGuru99Login" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestGuru99Login - 2019.07.07 at 19h 06m 53s.xml">
       <configuration name="TestGuru99Login" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -304,13 +343,13 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.5010672" side_tool="true" visible="true" weight="0.3297414" />
       <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3297414" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49893278" visible="true" weight="0.3297414" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4994664" weight="0.39978448" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -331,18 +370,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/HomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#280#281#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -376,10 +403,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="56" lean-forward="true" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#254#255#0" expanded="true" />
+            <element signature="e#280#281#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/guru99/demo/TestGuru99Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+        <state relative-caret-position="882">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

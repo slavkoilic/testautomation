@@ -3,6 +3,8 @@ package com.guru99.demo;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.HomePage;
@@ -37,14 +39,22 @@ public class TestGuru99Login {
         Assert.assertTrue(loginPageTitle.toLowerCase().contains("guru99 bank"));
     }
 
+
     @Test
     public void test_SuccessfulLogin(){
         objLogin = new LoginPage(driver);
 
-        objLogin.loginToGuru99("mgr123","mgr123");
+        objLogin.loginToGuru99("mngr207817","Ygudyta");
         objHomePage = new HomePage(driver);
+        String username = objHomePage.getHomePageDashboardUserName();
 
-        Assert.assertTrue(objHomePage.getHomePageDashboardUserName().toLowerCase().contains("manager id : mgr123"));
+        Assert.assertTrue(objHomePage.getHomePageDashboardUserName().toLowerCase().contains("manger id : mngr207817"));
+    }
+
+    @AfterTest
+    public void tearDown(){
+
+        driver.quit();
     }
 
 
