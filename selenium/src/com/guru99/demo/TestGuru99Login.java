@@ -25,8 +25,16 @@ public class TestGuru99Login {
     @BeforeTest
     public void setup(){
         System.setProperty("webdriver.gecko.driver","/home/slavko/Everything/Development/Tools/Selenium/geckoDriver/geckodriver-v0.24.0-linux64/geckodriver");
-        driver = new FirefoxDriver();
+
+        FirefoxBinary firefoxBinary = new FirefoxBinnary();
+        firefoxBinary.addCommandLineOptions("-headless");
+
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
+        firefoxOptions.setBinary(firefoxBinary);
+
+        driver = new FirefoxDriver(firefoxOptions);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
         driver.get("http://demo.guru99.com/v4");
     }
 
