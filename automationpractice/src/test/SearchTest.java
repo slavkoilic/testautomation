@@ -3,9 +3,7 @@ package test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.HomePage;
 import pages.NavigationSection;
 import pages.SearchResultsPage;
@@ -20,19 +18,16 @@ public class SearchTest {
     SearchResultsPage searchResultsPage;
 
 
-
-    @BeforeTest
+    /**
+     * setUp method to execute before this group of tests.
+     * Set Firefox driver
+     * Maximize window
+     * go to web address
+     */
+    @BeforeMethod
     public void setUp(){
 
         System.setProperty("webdriver.gecko.driver","/home/slavko/Everything/Development/Tools/Selenium/geckoDriver/geckodriver-v0.24.0-linux64/geckodriver");
-
-        //FirefoxBinary firefoxBinary = new FirefoxBinary();
-        //firefoxBinary.addCommandLineOptions("-headless");
-
-        //FirefoxOptions firefoxOptions = new FirefoxOptions();
-        //firefoxOptions.setBinary(firefoxBinary);
-        //driver = new FirefoxDriver(firefoxOptions);
-
 
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -41,6 +36,12 @@ public class SearchTest {
 
     }
 
+    /**
+     * Use a query to search for products on the website
+     * Print the names of the products found to the txt file
+     * Verify if file is created
+     * Verify if the file content is as expected
+     */
     @Test
     public void printSearchResultItems(){
         navigation = new NavigationSection(driver);
@@ -50,13 +51,19 @@ public class SearchTest {
         navigation.searchQuery("Printed dresses");
         navigation.clickSearchButton();
 
+        //print list of results to the txt file
         searchResultsPage.printListToFile("/home/slavko/Everything/tmp/list.txt");
 
-        //Assert.assertEquals(homePage.getNumberOfPopularItems(),7);
+        //Assert if file is created and if its content is as expected
+        //TBD
 
     }
 
-    @AfterTest
+    /**
+     * After each test method - close browser, quit driver
+     *
+     */
+    @AfterMethod
     public void tearDown(){
         driver.quit();
     }

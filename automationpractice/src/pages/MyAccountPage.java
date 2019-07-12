@@ -1,3 +1,7 @@
+/**
+ * My Account Page
+ * User gets redirected to this page after login or registering a new account.
+ */
 package pages;
 
 import org.openqa.selenium.By;

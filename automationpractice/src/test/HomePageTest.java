@@ -15,17 +15,16 @@ public class HomePageTest {
     NavigationSection navigation;
     HomePage homePage;
 
+    /**
+     * setUp method to execute before this group of tests.
+     * Set Firefox driver
+     * Maximize window
+     * go to web address
+     */
     @BeforeTest
     public void setUp(){
 
         System.setProperty("webdriver.gecko.driver","/home/slavko/Everything/Development/Tools/Selenium/geckoDriver/geckodriver-v0.24.0-linux64/geckodriver");
-
-        //FirefoxBinary firefoxBinary = new FirefoxBinary();
-        //firefoxBinary.addCommandLineOptions("-headless");
-
-        //FirefoxOptions firefoxOptions = new FirefoxOptions();
-        //firefoxOptions.setBinary(firefoxBinary);
-        //driver = new FirefoxDriver(firefoxOptions);
 
 
         driver = new FirefoxDriver();
@@ -34,6 +33,10 @@ public class HomePageTest {
         driver.get("http://automationpractice.com/");
 
     }
+
+    /**
+     * Check if number of Popular items shown on a home page is equal to the expected number
+     */
 
     @Test
     public void checkNumberOfPopularItems(){
@@ -45,6 +48,9 @@ public class HomePageTest {
 
     }
 
+    /**
+     * Check if number of Best Seller items shown on a home page is equal to the expected number
+     */
     @Test
     public void checkNumberOfBestSellerItems(){
         navigation = new NavigationSection(driver);
@@ -55,6 +61,9 @@ public class HomePageTest {
 
     }
 
+    /**
+     * After this group of tests, close browser, quit driver
+     */
     @AfterTest
     public void tearDown(){
         driver.quit();

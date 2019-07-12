@@ -61,11 +61,29 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library name="testng">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/lib/testng-7.0.0-beta7.jar!/" />
           <root url="jar://$MODULE_DIR$/lib/jcommander-1.72.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../../Tools/Selenium/commons_io/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../../Tools/Selenium/java_mail/javax.mail.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

@@ -10,6 +10,7 @@ import pages.AuthenticationPage;
 import pages.CreateAccountPage;
 import pages.HomePage;
 import pages.NavigationSection;
+import testdata.NewUserData;
 
 import java.util.concurrent.TimeUnit;
 
@@ -20,18 +21,27 @@ public class RegisterAccountTest {
     AuthenticationPage authentication;
     CreateAccountPage createAccount;
 
+    /**
+     * setUp method used to:
+     * - set path to the Firefox Driver
+     * - open browser and maximize window
+     * - go to the web address
+     */
     @BeforeMethod
     public void setUp(){
 
         System.setProperty("webdriver.gecko.driver","/home/slavko/Everything/Development/Tools/Selenium/geckoDriver/geckodriver-v0.24.0-linux64/geckodriver");
 
-        //FirefoxBinary firefoxBinary = new FirefoxBinary();
-        //firefoxBinary.addCommandLineOptions("-headless");
+        /*
+        This part is used if we want to switch to headless execution
 
-        //FirefoxOptions firefoxOptions = new FirefoxOptions();
-        //firefoxOptions.setBinary(firefoxBinary);
-        //driver = new FirefoxDriver(firefoxOptions);
+        FirefoxBinary firefoxBinary = new FirefoxBinary();
+        firefoxBinary.addCommandLineOptions("-headless");
 
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
+        firefoxOptions.setBinary(firefoxBinary);
+        driver = new FirefoxDriver(firefoxOptions);
+*/
 
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -40,13 +50,20 @@ public class RegisterAccountTest {
 
     }
 
-    @Test
+    /**
+     * Register an new account
+     * Navigate to Authentication page
+     * Fill out all the fields with valid data
+     * Click register button
+     * Verify user gets redirected to the "My Account Page", which has LogOut button visible in the Navigation bar
+     */
+    @Test //(dataProviderClass =NewUserData.class, dataProvider = "userData")
     public void registerNewAccount(){
         navigation = new NavigationSection(driver);
         authentication = new AuthenticationPage(driver);
         createAccount = new CreateAccountPage(driver);
         navigation.clickSignIn();
-        authentication.enterNewAddress("mail@slavkoilic1.com");
+        authentication.enterNewAddress("mail@slavkoilic9.com");
         authentication.clickCreateAccountBtn();
         createAccount.setGender("Mr");
         createAccount.setCustomerFirstName("Slavko");
@@ -78,6 +95,9 @@ public class RegisterAccountTest {
 
     }
 
+    /**
+     * close browser, quit driver after each method
+     */
     @AfterMethod
     public void tearDown(){
        driver.quit();
