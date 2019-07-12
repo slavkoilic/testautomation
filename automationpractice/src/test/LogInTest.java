@@ -21,6 +21,8 @@ public class LogInTest {
     WebDriver driver;
     NavigationSection navigation;
     AuthenticationPage authentication;
+    String PATH_TO_FIREFOX_DRIVER = "/home/slavko/Everything/Development/Tools/Selenium/geckoDriver/geckodriver-v0.24.0-linux64/geckodriver";
+    String SCREENSHOT_DIRECTORY_PATH = "/home/slavko/Everything/tmp/";
     //SendEmail sendEmail;
 
 
@@ -33,7 +35,7 @@ public class LogInTest {
     @BeforeMethod
     public void setUp(){
 
-        System.setProperty("webdriver.gecko.driver","/home/slavko/Everything/Development/Tools/Selenium/geckoDriver/geckodriver-v0.24.0-linux64/geckodriver");
+        System.setProperty("webdriver.gecko.driver",PATH_TO_FIREFOX_DRIVER);
 
 
         driver = new FirefoxDriver();
@@ -75,7 +77,7 @@ public class LogInTest {
 
                 File src=screenshot.getScreenshotAs(OutputType.FILE);
 
-                FileUtils.copyFile(src, new File("/home/slavko/Everything/tmp/"+result.getName()+".png"));
+                FileUtils.copyFile(src, new File(SCREENSHOT_DIRECTORY_PATH+result.getName()+".png"));
                 System.out.println("Successfully captured a screenshot");
 
                 //sendEmail.sendMail();

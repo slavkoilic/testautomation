@@ -16,6 +16,8 @@ public class SearchTest {
     HomePage homePage;
     NavigationSection navigation;
     SearchResultsPage searchResultsPage;
+    String PATH_TO_TXT_FILE = "/home/slavko/Everything/tmp/list.txt";
+    String PATH_TO_FIREFOX_DRIVER = "/home/slavko/Everything/Development/Tools/Selenium/geckoDriver/geckodriver-v0.24.0-linux64/geckodriver";
 
 
     /**
@@ -27,7 +29,7 @@ public class SearchTest {
     @BeforeMethod
     public void setUp(){
 
-        System.setProperty("webdriver.gecko.driver","/home/slavko/Everything/Development/Tools/Selenium/geckoDriver/geckodriver-v0.24.0-linux64/geckodriver");
+        System.setProperty("webdriver.gecko.driver",PATH_TO_FIREFOX_DRIVER);
 
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -52,7 +54,7 @@ public class SearchTest {
         navigation.clickSearchButton();
 
         //print list of results to the txt file
-        searchResultsPage.printListToFile("/home/slavko/Everything/tmp/list.txt");
+        searchResultsPage.printListToFile(PATH_TO_TXT_FILE);
 
         //Assert if file is created and if its content is as expected
         //TBD

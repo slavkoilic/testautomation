@@ -20,6 +20,7 @@ public class RegisterAccountTest {
     NavigationSection navigation;
     AuthenticationPage authentication;
     CreateAccountPage createAccount;
+    String PATH_TO_FIREFOX_DRIVER = "/home/slavko/Everything/Development/Tools/Selenium/geckoDriver/geckodriver-v0.24.0-linux64/geckodriver";
 
     /**
      * setUp method used to:
@@ -30,7 +31,7 @@ public class RegisterAccountTest {
     @BeforeMethod
     public void setUp(){
 
-        System.setProperty("webdriver.gecko.driver","/home/slavko/Everything/Development/Tools/Selenium/geckoDriver/geckodriver-v0.24.0-linux64/geckodriver");
+        System.setProperty("webdriver.gecko.driver",PATH_TO_FIREFOX_DRIVER);
 
         /*
         This part is used if we want to switch to headless execution

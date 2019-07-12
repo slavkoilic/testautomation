@@ -14,6 +14,7 @@ public class HomePageTest {
     WebDriver driver;
     NavigationSection navigation;
     HomePage homePage;
+    String PATH_TO_FIREFOX_DRIVER = "/home/slavko/Everything/Development/Tools/Selenium/geckoDriver/geckodriver-v0.24.0-linux64/geckodriver";
 
     /**
      * setUp method to execute before this group of tests.
@@ -24,7 +25,7 @@ public class HomePageTest {
     @BeforeTest
     public void setUp(){
 
-        System.setProperty("webdriver.gecko.driver","/home/slavko/Everything/Development/Tools/Selenium/geckoDriver/geckodriver-v0.24.0-linux64/geckodriver");
+        System.setProperty("webdriver.gecko.driver",PATH_TO_FIREFOX_DRIVER);
 
 
         driver = new FirefoxDriver();
