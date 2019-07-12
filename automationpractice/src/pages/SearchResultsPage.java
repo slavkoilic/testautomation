@@ -9,6 +9,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 public class SearchResultsPage {
@@ -25,7 +26,7 @@ public class SearchResultsPage {
 
     public List<String> getItemNames(){
         List<WebElement> strItemTitles = driver.findElement(ulProductList).findElements(itemTitles);
-        List<String> titles = null;
+        List<String> titles = new ArrayList<>();
 
         for(WebElement title:strItemTitles){
             titles.add(title.getText());
@@ -45,6 +46,7 @@ public class SearchResultsPage {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
 

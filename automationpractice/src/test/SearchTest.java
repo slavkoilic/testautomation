@@ -50,6 +50,8 @@ public class SearchTest {
         navigation.searchQuery("Printed dresses");
         navigation.clickSearchButton();
 
+        searchResultsPage.printListToFile("/home/slavko/Everything/tmp/list.txt");
+
         //Assert.assertEquals(homePage.getNumberOfPopularItems(),7);
 
     }
