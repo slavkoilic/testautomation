@@ -1,14 +1,15 @@
-package com.guru99.demo;
+package com.guru99.demo.tests;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pages.HomePage;
-import pages.LoginPage;
+import com.guru99.demo.pages.HomePage;
+import com.guru99.demo.pages.LoginPage;
 
 import java.util.concurrent.TimeUnit;
 
@@ -26,7 +27,7 @@ public class TestGuru99Login {
     public void setup(){
         System.setProperty("webdriver.gecko.driver","/home/slavko/Everything/Development/Tools/Selenium/geckoDriver/geckodriver-v0.24.0-linux64/geckodriver");
 
-        FirefoxBinary firefoxBinary = new FirefoxBinnary();
+        FirefoxBinary firefoxBinary = new FirefoxBinary();
         firefoxBinary.addCommandLineOptions("-headless");
 
         FirefoxOptions firefoxOptions = new FirefoxOptions();

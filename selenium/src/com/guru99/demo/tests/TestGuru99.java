@@ -1,4 +1,4 @@
-package com.guru99.demo;
+package com.guru99.demo.tests;
 
 
 import org.openqa.selenium.By;
